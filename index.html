@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sania, I'm Sorry | A Message from Sahin</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Floating Background Canvas -->
+    <canvas id="heartsCanvas"></canvas>
+
+    <!-- Floating Music Player Widget -->
+    <div class="music-player-widget collapsed" id="musicPlayer">
+        <div class="vinyl-container">
+            <img src="https://images.unsplash.com/photo-1539635278303-d4002c07eae3?auto=format&fit=crop&q=80&w=150" alt="Vinyl Cover" class="vinyl-record" id="vinylRecord">
+            <div class="vinyl-center"></div>
+        </div>
+        <div class="player-details">
+            <span class="song-title">Love Story</span>
+            <span class="song-artist">Indila</span>
+            <div class="player-controls">
+                <button id="prevBtn" title="Previous"><i class="fas fa-step-backward"></i></button>
+                <button id="playBtn" class="play-pause-btn" title="Play"><i class="fas fa-play"></i></button>
+                <button id="nextBtn" title="Next"><i class="fas fa-step-forward"></i></button>
+            </div>
+            <div class="progress-container" id="progressContainer">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+        </div>
+        <div class="toggle-player" id="togglePlayer" title="Toggle Player">
+            <i class="fas fa-music"></i>
+        </div>
+        <!-- Audio Player -->
+        <audio id="audioPlayer" src="Indila - Love Story (Instrumental).mp3" preload="auto"></audio>
+    </div>
+
+    <!-- Main Content wrapper -->
+    <main class="scroll-container">
+
+        <!-- Hero Section -->
+        <section class="hero-section" id="home">
+            <div class="hero-content">
+                <div class="badge fade-in">From Sahin, with love</div>
+                <h1 class="fade-in">Sania, I'm Sorry</h1>
+                <p class="hero-subtitle fade-in">I value you more than words can say. Please take a moment to see what is in my heart.</p>
+                <div class="scroll-indicator fade-in">
+                    <span>Scroll Down</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sincere Apology Letter Section -->
+        <section class="letter-section" id="apology-letter">
+            <div class="container">
+                <div class="section-header">
+                    <h2>A Letter to You</h2>
+                    <div class="divider"></div>
+                </div>
+                
+                <div class="envelope-wrapper">
+                    <div class="envelope" id="envelope">
+                        <div class="flap"></div>
+                        <div class="pocket"></div>
+                        <div class="letter" id="letter">
+                            <div class="letter-content">
+                                <p class="letter-salutation">Dear Sania,</p>
+                                <p>I am writing this because sometimes spoken words can't capture the depth of what I want to tell you. I want to apologize sincerely for my mistakes. I took your patience for granted, and I realize how much my actions hurt you. There are no excuses for how I behaved.</p>
+                                <p>You mean everything to me, and seeing you upset breaks my heart. I promise to listen more carefully, to support you through everything, and to be the partner you truly deserve. I am committed to making things right, not just through these words, but through my daily actions.</p>
+                                <p>Thank you for being in my life and for showing me what true patience and love look like. I hope you can find it in your heart to forgive me.</p>
+                                <p class="letter-closing">With all my love,</p>
+                                <p class="letter-signature">Sahin</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="envelope-instructions">
+                        <p id="envelopeTip"><i class="fas fa-envelope-open-text"></i> Click the envelope to open my letter</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Love Timeline -->
+        <section class="timeline-section" id="our-timeline">
+            <div class="container">
+                <div class="section-header">
+                    <h2>I Try To My Best</h2>
+                    <p class="section-subtitle"></p>
+                    <div class="divider"></div>
+                </div>
+
+                <div class="timeline">
+                   
+
+                   
+
+                  
+
+                    <!-- Timeline Item 4 -->
+                    <div class="timeline-item right animate-warning">
+                        <div class="timeline-dot warning-dot"></div>
+                        <div class="timeline-content warning-content">
+                            <span class="timeline-date">The Bump in the Road</span>
+                            <h3>A Mistake I Will Learn From</h3>
+                            <p>I stumbled, and I hurt the person who matters most to me. This moment isn't just about my regret; it's a turning point where I commit to being better, kinder, and more attentive to you every single day.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo Gallery (Happy Memories) -->
+        <section class="gallery-section" id="memories">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Happy Memories</h2>
+                    <p class="section-subtitle">A reminder of the smiles we shared</p>
+                    <div class="divider"></div>
+                </div>
+
+                <div class="polaroid-grid">
+                    <!-- Polaroid 1 -->
+                    <div class="polaroid-card">
+                        <div class="polaroid-img-wrapper">
+                            <img src="images/coffee.png" alt="Our Cozy Coffee Date">
+                        </div>
+                        <div class="polaroid-caption">
+                            <span>Sharing warm coffee and warmer smiles...</span>
+                        </div>
+                    </div>
+
+                    <!-- Polaroid 2 -->
+                    <div class="polaroid-card">
+                        <div class="polaroid-img-wrapper">
+                            <img src="images/stargazing.png" alt="Stargazing Under Shooting Stars">
+                        </div>
+                        <div class="polaroid-caption">
+                            <span>Countless stars, but my eyes were on you.</span>
+                        </div>
+                    </div>
+
+                  
+                </div>
+            </div>
+        </section>
+
+        <!-- Reasons I Love You -->
+        <section class="reasons-section" id="reasons">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Reasons I Love You</h2>
+                    <p class="section-subtitle">Click the cards to reveal some of the things that make you amazing</p>
+                    <div class="divider"></div>
+                </div>
+
+                <div class="reasons-grid">
+                    <!-- Reason Card 1 -->
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <i class="fas fa-heart"></i>
+                                <h3>Your Smile</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <p>It has the power to brighten up my darkest days instantly. Your laugh is my absolute favorite sound in the world.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Reason Card 2 -->
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <i class="fas fa-feather"></i>
+                                <h3>Your Kindness</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <p>You care so deeply for everyone around you. Your compassionate heart inspires me to be a better person daily.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                 
+                    
+
+                    <!-- Reason Card 5 -->
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <i class="fas fa-sparkles"></i>
+                                <h3>Your Grace</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <p>How beautiful you are, both inside and out. The elegant way you handle challenges with maturity and patience.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Reason Card 6 -->
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <i class="fas fa-infinity"></i>
+                                <h3>Just Being You</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <p>You don't need to do anything special. Just your presence makes my life infinitely better. You are my home, Sania.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Commitments/Future Actions -->
+        <section class="commitments-section" id="commitments">
+            <div class="container">
+                <div class="section-header">
+                    <h2>My Promises to You</h2>
+                    <p class="section-subtitle">Actions speak louder than words. Here is my commitment to us:</p>
+                    <div class="divider"></div>
+                </div>
+
+                <div class="commitments-list">
+                    <div class="commitment-item">
+                        <div class="commitment-checkbox">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="commitment-text">
+                            <h3>Listening with Empathy</h3>
+                            <p>I will truly listen to your thoughts, feelings, and worries without interrupting or getting defensive. Your feelings are always valid.</p>
+                        </div>
+                    </div>
+
+                    <div class="commitment-item">
+                        <div class="commitment-checkbox">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="commitment-text">
+                            <h3>Being More Mindful & Attentive</h3>
+                            <p>I will pay attention to the little things that matter to you, checking in on how you're doing and making time for us no matter what.</p>
+                        </div>
+                    </div>
+
+                    <div class="commitment-item">
+                        <div class="commitment-checkbox">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="commitment-text">
+                            <h3>Patience and Understanding</h3>
+                            <p>Instead of rushing, I will show patience. We are a team, and we will work through disagreements calmly and hand-in-hand.</p>
+                        </div>
+                    </div>
+
+                    <div class="commitment-item">
+                        <div class="commitment-checkbox">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="commitment-text">
+                            <h3>Consistently Showing Appreciation</h3>
+                            <p>I will never take your love for granted. I'll make sure you know every single day how much I love, respect, and treasure you.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA / Acceptance Section -->
+        <section class="cta-section" id="let-us-talk">
+            <div class="cta-card">
+                <h2>A New Beginning?</h2>
+                <p>I know it takes time to heal, and I want to give you all the space you need. When you are ready, I'd love to talk, listen, and hold your hand again.</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-primary" id="acceptBtn">
+                        <i class="fas fa-heart"></i> Accept My Apology
+                    </button>
+                    <!-- Pre-filled sweet message link to WhatsApp -->
+                    <a href="https://wa.me/?text=Hey%20Sahin,%20I%20saw%20your%20message.%20Let's%20talk%20❤️" class="btn btn-secondary" target="_blank" id="talkBtn">
+                        <i class="fab fa-whatsapp"></i> Let's Talk?
+                    </a>
+                    <!-- Link to Instagram DM -->
+                    <a href="https://www.instagram.com/_sahin__akhtar_?igsh=MWxxMWthbm5weDRnZA==" class="btn btn-instagram" target="_blank" id="instagramBtn">
+                        <i class="fab fa-instagram"></i> Let's Talk on Insta?
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Made with love by Sahin, for Sania &hearts;</p>
+        </footer>
+
+    </main>
+
+    <!-- Confetti Canvas -->
+    <canvas id="confettiCanvas"></canvas>
+
+    <!-- Modal for Acceptance -->
+    <div class="modal-backdrop" id="modalBackdrop">
+        <div class="modal-card">
+            <div class="modal-icon"><i class="fas fa-heart-circle-check"></i></div>
+            <h2>Thank You, Sania! ❤️</h2>
+            <p>Your forgiveness means the world to me. I promise to keep every single commitment I've made here and show you the love you deserve every day.</p>
+            <button class="btn btn-primary" id="closeModalBtn">Close with a Smile</button>
+        </div>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
